@@ -28,7 +28,7 @@ Config.EnabledControls = { -- controls enabled when doctor is patching you up
 
 }
 
-Config.Notification = 'vorp' -- redemrp, vorp, gum_notify or chat. If you want to you can use your own notification system in the function below.
+Config.Notification = 'chat' -- redemrp, vorp, gum_notify or chat. If you want to you can use your own notification system in the function below.
 
 SendNotification = function(text) -- not really sure about any of these framework notifications so please correct these if they dont work :)
 	if Config.Notification == 'redemrp' then
