@@ -44,7 +44,7 @@ Citizen.CreateThread(function()
 				Wait(100)
 			end
 			spawnrec = CreatePed(Config.Receptionist, Config.ReceptionistLoc.x, Config.ReceptionistLoc.y, Config.ReceptionistLoc.z - 1.0, Config.ReceptionistLoc.w, false, true)
-			SetEntityAlpha(spawnrec, 0, false)
+			SetEntityAlpha(spawnrec, 255, false)
 			SetPedRandomComponentVariation(spawnrec, 0)
 			FreezeEntityPosition(spawnrec, true)
 			SetEntityInvincible(spawnrec, true)			
