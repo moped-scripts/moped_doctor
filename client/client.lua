@@ -83,6 +83,12 @@ AddEventHandler('moped_doctor:notenoughmoney', function(money)
 	pressed = false
 end)
 
+RegisterNetEvent('moped_doctor:toomuchpeoplewithjob')
+AddEventHandler('moped_doctor:toomuchpeoplewithjob', function()
+	SendNotification(Config.Locales.job)
+	pressed = false
+end)
+
 RegisterNetEvent('moped_doctor:occupied')
 AddEventHandler('moped_doctor:occupied', function()
 	SendNotification(Config.Locales.occupied)

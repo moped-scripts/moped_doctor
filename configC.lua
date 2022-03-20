@@ -17,6 +17,7 @@ Config.Locales = {
 	["healthy"]= "You don't need any medical help.",
     ["notenough"]= "You don't have enough money. You're missing ",
     ["occupied"]= "The doctor is already taking care of somebody else. Please wait.",
+	["job"]= "The doctor is not here.. (There is already a player doctor somewhere! Go find him!)",
 	["press"]= "Press ~r~E ~w~to get patched up by the doctor", -- should change E to your InteractControl if you change it
 }
 
