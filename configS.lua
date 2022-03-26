@@ -4,5 +4,5 @@ Config.Framework = 'vorp' -- redemrp, vorp or standalone. To use your own framew
 Config.Money = 1 -- How many dollars should it cost to get patched up?
 
 Config.JobCheck = true -- should there be a check if players with a job are online?
-Config.JobName = 'doctor' -- jobname used in code
+Config.JobName = {'doctor', 'doctor2'} -- jobname used in code -- can use multiple or just one (has to be in a table {})
 Config.JobCount = 1 -- how many players with the job need to be online before it tells the client to find the player doctor?

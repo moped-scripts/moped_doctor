@@ -3,14 +3,16 @@ local current = nil
 RegisterNetEvent('moped_doctor:checkin')
 AddEventHandler('moped_doctor:checkin', function()
     local src = source
+    local jobcount = 0
     if not current then
         if Config.Framework == 'vorp' then
-            local jobcount = 0
             if Config.JobCheck then
                 for _, playerId in pairs(GetPlayers()) do
-                    TriggerEvent("vorp:getCharacter",playerId,function(user)
-                        if user.job == Config.JobName then jobcount = jobcount + 1 end
-                    end)
+                    for k,v in pairs(Config.JobName) do 
+                        TriggerEvent("vorp:getCharacter",playerId,function(user)
+                            if user.job == v then jobcount = jobcount + 1 end
+                        end)
+                    end
                 end
             end
 
@@ -34,13 +36,14 @@ AddEventHandler('moped_doctor:checkin', function()
                 TriggerClientEvent('moped_doctor:toomuchpeoplewithjob', src)
             end
         elseif Config.Framework == 'redemrp' then
-            local jobcount = 0
             if Config.JobCheck then
                 for _, playerId in pairs(GetPlayers()) do
-                    TriggerEvent("redemrp:getPlayerFromId", playerId, function(user)
-                        local job = user.getJob()
-                        if job == Config.JobName then jobcount = jobcount + 1 end
-                    end)
+                    for k,v in pairs(Config.JobName) do 
+                        TriggerEvent("redemrp:getPlayerFromId", playerId, function(user)
+                            local job = user.getJob()
+                            if job == v then jobcount = jobcount + 1 end
+                        end)
+                    end
                 end
             end
             
